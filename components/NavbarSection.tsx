@@ -33,7 +33,7 @@ const NavbarSection = (props: Props) => {
         <div
           className={`${
             openMenu
-              ? "absolute right-0 md:hidden flex top-0 pl-10 h-screen w-2/3 flex-col items-start gap-y-12 bg-white pt-16"
+              ? "absolute right-0 top-0 flex h-screen w-2/3 flex-col items-start gap-y-12 bg-white pl-10 pt-24 md:hidden"
               : "hidden md:flex"
           }`}
         >
@@ -231,6 +231,20 @@ const NavbarSection = (props: Props) => {
               </Menu.Button>
             </Link>
           </Menu>
+          {openMenu ? (
+            <div className="md:hidden gap-y-8 flex flex-col items-center">
+              <Button
+                name="Login"
+                className="rounded-xl px-5 py-2 font-semibold outline-1 outline-offset-2 hover:outline"
+              />
+              <Button
+                name="Register"
+                className="rounded-xl px-5 py-2 font-semibold outline-1 outline-offset-2 hover:outline"
+              />
+            </div>
+          ) : (
+            null
+          )}
         </div>
       </div>
       <div className="hidden gap-x-5 md:flex">
@@ -244,7 +258,10 @@ const NavbarSection = (props: Props) => {
         />
       </div>
 
-      <button onClick={() => setOpenMenu(!openMenu)} className="absolute md:hidden right-8">
+      <button
+        onClick={() => setOpenMenu(!openMenu)}
+        className="absolute right-8 md:hidden"
+      >
         {openMenu ? <CloseMenuBtn /> : <OpenMenuBtn />}
       </button>
     </nav>

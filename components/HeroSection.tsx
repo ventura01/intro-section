@@ -10,14 +10,16 @@ const HeroSection = (props: Props) => {
       id="hero-section"
       className="mx-auto my-5 grid max-w-screen-xl grid-cols-1 md:grid-cols-2"
     >
-      <div className="flex flex-col justify-between px-5 md:col-start-1 md:col-end-2 md:pr-28 md:pt-20">
+      <div className="flex flex-col justify-between px-5 md:col-start-1 md:col-end-2 md:pr-36 md:pt-20">
         <div className="mb-12 space-y-8 md:mb-0 md:space-y-12">
           <h1 className="text-center text-4xl font-bold md:text-left md:text-6xl">
-            Make remote work
+            Make <br />
+            remote work
           </h1>
           <p className="text-center text-lg text-mediumGray md:text-left">
-            Get your team in sync, no matter your location. Streamline
-            processes, create team rituals, and watch productivity soar.
+            Get your team in sync, no matter your
+            <br /> location. Streamline processes, create team <br />
+            rituals, and watch productivity soar.
           </p>
           <Button
             name="Learn more"
